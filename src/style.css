@@ -11,5 +11,19 @@
   --color-list-border:#eadbc8;
    --color-list-h: #eadbc8;
   --color-list-b-h: #dac0ae;
-
+  --color-light-red:rgb(232, 106, 51);
 }
+
+
+.correct {
+  background-color: #e6fff0;
+  border-color: #a3f0c4;
+  color: #28a745;
+}
+
+.incorrect {
+  background-color: #fff0f0;
+  border-color: #ffbdbd;
+  color: #dc3545;
+}
+

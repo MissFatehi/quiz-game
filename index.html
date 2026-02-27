@@ -13,33 +13,34 @@
       class="w-screen h-screen bg-bg-body flex flex-row justify-center items-center font-sans"
     >
       <main class="w-150 h-fit bg-white p-4 rounded-2xl">
-        <section class="w-full h-full flex flex-col justify-between items-center gap-6 hidden">
+        <section class="startSection w-full h-full flex flex-col justify-between items-center gap-6 ">
           <h1 class="text-[40px] text-red-txt font-bold">Quiz Time!</h1>
           <p class="text-gray-txt-100 text-xl ">Test your knowledge with these fun questions</p>
-          <button class=" bg-red-btn rounded-lg px-6 py-3 text-white text-xl hover:bg-red-btn-h">Start Quiz</button>
+          <button class="startBtn bg-red-btn rounded-lg px-6 py-3 text-white text-xl hover:bg-red-btn-h">Start Quiz</button>
         </section>
-        <section class="w-full h-fit flex flex-col justify-between items-center gap-6 p-4 hidden">
-          <h2 class="text-2xl font-bold">What is the capital of France?</h2>
+        <section class="questionSection w-full h-fit  flex-col justify-between items-center gap-6 p-4 hidden">
+          <h2 class="questionTitle text-2xl font-bold text-center"></h2>
           <div class="w-full flex flex-row justify-between items-center text-[16px]">
-            <span>Question 1 of 5</span>
-            <span>Score: 0</span>
+            <p>Question  <span class="question-counter"></span>  of  <span class="questionEnd"></span></p>
+            <p >Score: <span class="score"></span></p>
           </div>
-        <ul class="w-full flex flex-col gap-2">
-          <li class="w-full p-3 bg-list-bg border-2 border-list-border rounded-md hover:bg-list-h hover:border-list-b-h transition-all duration-200 ease-in-out text-[18px] font-medium">London</li>
+        <ul class="questionAnswers w-full flex flex-col gap-2 ">
+          <!-- <li class="w-full p-3 bg-list-bg border-2 border-list-border rounded-md hover:bg-list-h hover:border-list-b-h transition-all duration-200 ease-in-out text-[18px] font-medium">London</li>
           <li class="w-full p-3 bg-list-bg border-2 border-list-border rounded-md hover:bg-list-h hover:border-list-b-h transition-all duration-200 ease-in-out text-[18px] font-medium">Berlin</li>
           <li class="w-full p-3 bg-list-bg border-2 border-list-border rounded-md hover:bg-list-h hover:border-list-b-h transition-all duration-200 ease-in-out text-[18px] font-medium">Paris</li>
-          <li class="w-full p-3 bg-list-bg border-2 border-list-border rounded-md hover:bg-list-h hover:border-list-b-h transition-all duration-200 ease-in-out text-[18px] font-medium">Madrid</li>
+          <li class="w-full p-3 bg-list-bg border-2 border-list-border rounded-md hover:bg-list-h hover:border-list-b-h transition-all duration-200 ease-in-out text-[18px] font-medium">Madrid</li> -->
         </ul>
-          <div class="w-full h-3 bg-list-bg rounded-md"></div>
-        </section>
-        <section class="">
-          <h2>Quiz Results</h2>
-          <div>
-            <p>You scored 0 out of 5</p>
-            <p>Keep studying! You'll get better!</p>
+          <div class="w-full h-3 bg-list-bg rounded-md overflow-hidden">
+            <div class="progressBar w-0 h-full bg-red-800"></div>
           </div>
-          <button>Restart Quiz</button>
-
+        </section>
+        <section class="resultSection w-full h-full hidden flex-col justify-between items-center gap-6">
+          <h2 class="text-[32px] font-bold text-red-btn">Quiz Results</h2>
+          <div class="w-full bg-bg-body py-5 rounded-2xl">
+            <p class="text-[19px] text-center mb-3">You scored <span class="resultScore"></span>  out of <span class="resultScoreEnd"></span> </p>
+            <p class="text-[24px] font-semibold text-light-red text-center">Keep studying! You'll get better!</p>
+          </div>
+          <button class="restartBtn bg-red-btn rounded-lg px-6 py-3 text-white text-xl hover:bg-red-btn-h">Restart Quiz</button>
         </section>
       </main>
     </div>
