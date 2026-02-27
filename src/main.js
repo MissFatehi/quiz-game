@@ -63,13 +63,13 @@ const restartBtnEl = document.querySelector(".restartBtn");
 startBtnEl.addEventListener('click', ()=>{
     startSecEl.classList.add("!hidden");
     questionSecEl.classList.add("!flex");
-  createQuestion();
+    createQuestion();
 })
 
 let currentQuestin = 1;
 let score=0;
 
-function createQuestion (){
+function createQuestion(){
     const question = quizQuestions[currentQuestin-1];
     questionTitleEl.innerHTML= question.question;
     questionStepEl.innerHTML=currentQuestin;
@@ -97,12 +97,21 @@ function createQuestion (){
             score+=1;
         }
         else{
-            answer.classList.add("incorrect")
+            answer.classList.add("incorrect");
+            answer.
         }
+        
         progressBarEl.style.width = `${currentQuestin*25}%` ;
-      questionAnswersEl.innerHTML="";
-        currentQuestin+=1;
-        createQuestion();
+    
+      setTimeout(() => {
+                 currentQuestin+=1;
+                 questionAnswersEl.innerHTML="";
+                 
+                 createQuestion();
+      }, 1000);
+     
+
+     
     })
 
     })
@@ -112,9 +121,7 @@ resultScoreEndEl.innerHTML=quizQuestions.length;
 
 
 restartBtnEl.addEventListener("click",()=>{
-     resultSecEl.classList.add("!hidden");
-      startSecEl.classList.remove("!hidden");
-
+  window.location.reload();
 })
 
     
